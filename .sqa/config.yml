@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.9
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cdc.osmh-indexer.cmm:
+      branch: main
+      repo: https://github.com/cessda/cessda.cdc.osmh-indexer.cmm
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm git:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-jade-hound.sh
+        container: qc.acc_baggy-olivine-sponge
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-russet-cattle.sh
+        container: qc.doc_sunny-bistre-ostrich
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm git:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-russet-retriever.sh
+        container: qc.doc_shaggy-black-echidna
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-xanthic-seal.sh
+        container: qc.doc_foggy-ruby-ocelot
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-persimmon-spoonbill.sh
+        container: qc.lic_lumpy-sangria-quetzal
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-cobalt-argentino.sh
+        container: qc.sty_baggy-heliotrope-squirrel
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-khaki-paradise.sh
+        container: qc.sty_sleepy-brown-squirrel
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-sepia-swan.sh
+        container: qc.sty_sleazy-jade-neanderthal
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-green-beetle.sh
+        container: qc.ver_scanty-cyan-woodlouse
+timeout: 5400
