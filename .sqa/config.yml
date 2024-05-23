@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.9
+      branch: release/2.0.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda.cdc.osmh-indexer.cmm:
       branch: main
@@ -15,46 +15,52 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm git:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-jade-hound.sh
-        container: qc.acc_baggy-olivine-sponge
+        - /usr/bin/env sh .sqa/script.silly-tan-sponge.sh
+        container: qc.acc_blurry-indigo-quetzal
   QC.Doc:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-russet-cattle.sh
-        container: qc.doc_sunny-bistre-ostrich
+        - /usr/bin/env sh .sqa/script.sickly-black-hummingbird.sh
+        container: qc.doc_gummy-celadon-armadillo
       github.com/cessda/cessda.cdc.osmh-indexer.cmm git:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-russet-retriever.sh
-        container: qc.doc_shaggy-black-echidna
+        - /usr/bin/env sh .sqa/script.craggy-charcoal-peccary.sh
+        container: qc.doc_flimsy-bronze-snail
       github.com/cessda/cessda.cdc.osmh-indexer.cmm markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-xanthic-seal.sh
-        container: qc.doc_foggy-ruby-ocelot
+        - /usr/bin/env sh .sqa/script.pokey-fuchsia-kingfisher.sh
+        container: qc.doc_baggy-russet-bombay
   QC.Lic:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-persimmon-spoonbill.sh
-        container: qc.lic_lumpy-sangria-quetzal
+        - /usr/bin/env sh .sqa/script.zippy-platinum-vulture.sh
+        container: qc.lic_pokey-linen-dachshund
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.cdc.osmh-indexer.cmm cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-azure-robin.sh
+        container: qc.met_sunny-brown-pig
   QC.Sty:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-cobalt-argentino.sh
-        container: qc.sty_baggy-heliotrope-squirrel
+        - /usr/bin/env sh .sqa/script.skanky-tangerine-clam.sh
+        container: qc.sty_smelly-auburn-wallaby
       github.com/cessda/cessda.cdc.osmh-indexer.cmm hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-khaki-paradise.sh
-        container: qc.sty_sleepy-brown-squirrel
+        - /usr/bin/env sh .sqa/script.homey-gold-hyrax.sh
+        container: qc.sty_clammy-puce-chamois
       github.com/cessda/cessda.cdc.osmh-indexer.cmm jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-sepia-swan.sh
-        container: qc.sty_sleazy-jade-neanderthal
+        - /usr/bin/env sh .sqa/script.cozy-buff-moose.sh
+        container: qc.sty_pokey-ochre-whale
   QC.Ver:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-green-beetle.sh
-        container: qc.ver_scanty-cyan-woodlouse
+        - /usr/bin/env sh .sqa/script.dorky-magnolia-dodo.sh
+        container: qc.ver_wimpy-seashell-hound
 timeout: 5400
