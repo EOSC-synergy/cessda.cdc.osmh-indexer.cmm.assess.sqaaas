@@ -5,5 +5,5 @@
 
 (
 cd github.com/cessda/cessda.cdc.osmh-indexer.cmm &&
-    cffconvert --validate
+    git rev-parse --is-inside-work-tree 
 )

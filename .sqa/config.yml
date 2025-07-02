@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda.cdc.osmh-indexer.cmm:
       branch: main
@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm git:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-viridian-cougar.sh
-        container: qc.acc_muggy-smalt-indri
+        - /usr/bin/env sh .sqa/script.homely-plum-robin.sh
+        container: qc.acc_snoopy-lilac-spider
   QC.Doc:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-aquamarine-gorilla.sh
-        container: qc.doc_wiggy-pear-dingo
+        - /usr/bin/env sh .sqa/script.homely-carmine-clam.sh
+        container: qc.doc_randy-periwinkle-meerkat
       github.com/cessda/cessda.cdc.osmh-indexer.cmm git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-tomato-centipede.sh
-        container: qc.doc_clammy-cream-cougar
+        - /usr/bin/env sh .sqa/script.shaggy-periwinkle-fowl.sh
+        container: qc.doc_scaly-gold-quokka
       github.com/cessda/cessda.cdc.osmh-indexer.cmm markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-salmon-schnauzer.sh
-        container: qc.doc_gimpy-green-frigatebird
+        - /usr/bin/env sh .sqa/script.nerdy-lavender-greyhound.sh
+        container: qc.doc_pasty-cream-sloth
   QC.Lic:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-puce-dugong.sh
-        container: qc.lic_flimsy-carmine-booby
+        - /usr/bin/env sh .sqa/script.clammy-brass-dog.sh
+        container: qc.lic_flaky-lime-mongrel
   QC.Met:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-aqua-ibis.sh
-        container: qc.met_skanky-rose-crane
+        - /usr/bin/env sh .sqa/script.smelly-saffron-squirt.sh
+        container: qc.met_zippy-lilac-lionfish
   QC.Sty:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-green-peccary.sh
-        container: qc.sty_muggy-firebrick-moorhen
+        - /usr/bin/env sh .sqa/script.beady-sangria-crane.sh
+        container: qc.sty_fuzzy-firebrick-quokka
       github.com/cessda/cessda.cdc.osmh-indexer.cmm jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-razzmatazz-bullfrog.sh
-        container: qc.sty_gimpy-celadon-cheetah
+        - /usr/bin/env sh .sqa/script.muggy-razzmatazz-wallaby.sh
+        container: qc.sty_wiggy-wisteria-swan
   QC.Ver:
     repos:
       github.com/cessda/cessda.cdc.osmh-indexer.cmm get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-lemon-starfish.sh
-        container: qc.ver_trippy-chestnut-malamute
+        - /usr/bin/env sh .sqa/script.wimpy-bronze-akita.sh
+        container: qc.ver_snazzy-white-eagle
 timeout: 5400
